@@ -6,16 +6,10 @@ export function Footer() {
       <div>
         <div className="rct-footer-brand">
           <a href="#home" className="rct-footer-logo">
-            <span>
-              <img
-                src="https://rct24.com/wp-content/uploads/2024/08/24-removebg-preview-1.png"
-                alt="RCT24 logo"
-              />
-            </span>
-            <strong>
-              RCT24
-              <small>Restoration Construction Team</small>
-            </strong>
+            <img
+              src="/images/rct-logo-full.png"
+              alt="RCT - Restoration Construction Team - Disaster Recovery"
+            />
           </a>
           <p>
             Tampa-based disaster recovery and restoration support for Florida

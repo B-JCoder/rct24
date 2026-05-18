@@ -68,7 +68,7 @@ export function HomePage() {
               className="rct-hero-photo"
               style={{
                 backgroundImage:
-                  `linear-gradient(90deg, rgba(6, 17, 31, 0.96), rgba(6, 17, 31, 0.58), rgba(6, 17, 31, 0.9)), url("${image}")`,
+                  `linear-gradient(90deg, rgba(6, 17, 31, 0.15) 0%, rgba(6, 17, 31, 0.35) 40%, rgba(6, 17, 31, 0.85) 65%, rgba(6, 17, 31, 0.95) 100%), url("${image}")`,
               }}
             />
           ))}
