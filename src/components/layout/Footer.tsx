@@ -36,6 +36,12 @@ export function Footer() {
       <p className="rct-footer-meta">
         CGC153880 | Copyright @ 2024 Restoration Construction Team, All Right Reserved
       </p>
+      <p className="rct-footer-dev">
+        Developed by{" "}
+        <a href="https://www.bshsolutionss.com/" target="_blank" rel="noreferrer">
+          BSH Solutions
+        </a>
+      </p>
     </footer>
   );
 }
