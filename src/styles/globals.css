@@ -276,7 +276,17 @@ img {
   box-shadow: 0 0 24px var(--teal);
 }
 
-.rct-hero h1,
+.rct-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
 .rct-section h2,
 .rct-contact h2 {
   max-width: 12ch;
@@ -827,7 +837,10 @@ img {
     padding-top: 96px;
   }
 
-  .rct-hero h1,
+  .rct-hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
+  }
+
   .rct-section h2,
   .rct-contact h2 {
     font-size: clamp(1.1rem, 5.5vw, 1.7rem);
