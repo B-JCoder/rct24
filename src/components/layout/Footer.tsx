@@ -17,8 +17,6 @@ export function Footer() {
           </p>
         </div>
         <div className="rct-footer-links">
-          <a href="https://rct24.com/">Original Website</a>
-          <a href="https://rct24.com/contact-us/">Contact Us</a>
           <a
             href="https://www.facebook.com/RestorationConstructionTeam/"
             target="_blank"
