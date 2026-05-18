@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RCT24 | Premium Restoration Demo</title>
+    <meta
+      name="description"
+      content="Premium one-page demo for Restoration Construction Team, LLC in Tampa, Florida."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+      :root {
+        --ink: #08121f;
+        --cream: #f6f2e9;
+        --gold: #f6b73c;
+        --aqua: #2dd4bf;
+        --blue: #0d5c8c;
+        --red: #f04438;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: #f8fafc;
+        background:
+          radial-gradient(circle at 10% 20%, rgba(45, 212, 191, 0.14), transparent 30rem),
+          radial-gradient(circle at 82% 8%, rgba(246, 183, 60, 0.12), transparent 28rem),
+          linear-gradient(135deg, #06111f 0%, #091827 44%, #111827 100%);
+        font-family: Inter, system-ui, sans-serif;
+      }
+
+      .display {
+        font-family: "Playfair Display", Georgia, serif;
+      }
+
+      .glass {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(18px);
+      }
+
+      .hero-bg {
+        background-image:
+          linear-gradient(90deg, rgba(6, 17, 31, 0.96), rgba(6, 17, 31, 0.62), rgba(6, 17, 31, 0.9)),
+          url("https://cdn.pixabay.com/photo/2020/02/02/04/03/tampa-4811962_1280.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .tampa-card {
+        background-image:
+          linear-gradient(180deg, rgba(8, 18, 31, 0.08), rgba(8, 18, 31, 0.88)),
+          url("https://rct24.com/wp-content/uploads/2024/10/image-3-e1736976227825.png");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .shine {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .shine::after {
+        position: absolute;
+        top: -60%;
+        left: -80%;
+        width: 55%;
+        height: 220%;
+        content: "";
+        transform: rotate(24deg);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+        transition: left 0.8s ease;
+      }
+
+      .shine:hover::after {
+        left: 130%;
+      }
+
+      .service-card {
+        transform-style: preserve-3d;
+        transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(246, 183, 60, 0.55);
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .soft-grid {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+        background-size: 44px 44px;
+      }
+
+      .marquee {
+        animation: marquee 26s linear infinite;
+      }
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-bg {
+          background-position: 58% center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/55 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
+        <a href="#home" class="flex items-center gap-3">
+          <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white p-1.5 shadow-lg">
+            <img
+              src="https://rct24.com/wp-content/uploads/2024/08/24-removebg-preview-1.png"
+              alt="RCT logo"
+              class="h-full w-full object-contain"
+            />
+          </span>
+          <span>
+            <span class="block text-sm font-black tracking-[0.24em] text-white">RCT24</span>
+            <span class="block text-xs text-slate-300">Restoration Construction Team</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-semibold text-slate-200 md:flex">
+          <a href="#about" class="hover:text-amber-300">About</a>
+          <a href="#services" class="hover:text-amber-300">Services</a>
+          <a href="#why" class="hover:text-amber-300">Why RCT</a>
+          <a href="#contact" class="hover:text-amber-300">Contact</a>
+        </nav>
+        <a
+          href="tel:18668275277"
+          class="shine rounded-full bg-amber-400 px-4 py-2 text-sm font-black text-slate-950 shadow-xl shadow-amber-500/20"
+        >
+          24/7: 1-866-827-5277
+        </a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero-bg relative min-h-screen overflow-hidden pt-28">
+        <div class="absolute inset-0 soft-grid opacity-40"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-44 bg-gradient-to-t from-[#06111f] to-transparent"></div>
+
+        <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 pt-12 lg:grid-cols-[1.05fr_0.95fr] lg:pt-24">
+          <div class="hero-copy">
+            <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-amber-200 backdrop-blur">
+              <span class="h-2 w-2 rounded-full bg-teal-300"></span>
+              Tampa, Florida | Since 1989
+            </div>
+            <h1 class="display max-w-4xl text-6xl font-black leading-[0.9] text-white md:text-8xl">
+              Building Trust. Restoring Lifestyle.
+            </h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-200 md:text-xl">
+              Restoration Construction Team is a full service Disaster Recovery and Restoration company with corporate offices in Tampa, serving Florida since 1989.
+            </p>
+            <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+              <a href="#contact" class="shine rounded-full bg-white px-7 py-4 text-center font-black text-slate-950 shadow-2xl">
+                Start Emergency Response
+              </a>
+              <a href="#services" class="rounded-full border border-white/20 bg-white/10 px-7 py-4 text-center font-black text-white backdrop-blur hover:bg-white/20">
+                Explore Services
+              </a>
+            </div>
+            <div class="mt-10 grid max-w-2xl grid-cols-3 gap-3">
+              <div class="glass rounded-3xl p-4">
+                <p class="text-3xl font-black text-amber-300">24/7</p>
+                <p class="text-xs text-slate-300">Everyday response</p>
+              </div>
+              <div class="glass rounded-3xl p-4">
+                <p class="text-3xl font-black text-teal-300">70+</p>
+                <p class="text-xs text-slate-300">Years combined management experience</p>
+              </div>
+              <div class="glass rounded-3xl p-4">
+                <p class="text-3xl font-black text-white">CGC</p>
+                <p class="text-xs text-slate-300">153880 licensed contractor</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual grid gap-4">
+            <div class="glass rounded-[2rem] p-4">
+              <div class="tampa-card min-h-[420px] rounded-[1.45rem] p-6">
+                <div class="flex h-full flex-col justify-between">
+                  <div class="w-fit rounded-full bg-slate-950/65 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-amber-200">
+                    Florida Disaster Recovery
+                  </div>
+                  <div class="rounded-3xl bg-slate-950/70 p-5 backdrop-blur">
+                    <p class="text-sm uppercase tracking-[0.24em] text-teal-200">Emergency Call</p>
+                    <p class="mt-2 text-4xl font-black text-white">1-866-827-5277</p>
+                    <p class="mt-2 text-sm text-slate-300">Call Restoration Construction Team, LLC 24/7.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+              <img src="https://rct24.com/wp-content/uploads/2024/08/fire-1024x724.jpg" alt="Fire restoration" class="h-28 rounded-3xl object-cover shadow-2xl" />
+              <img src="https://rct24.com/wp-content/uploads/2024/08/flood-1024x768.jpg" alt="Flood restoration" class="h-28 rounded-3xl object-cover shadow-2xl" />
+              <img src="https://rct24.com/wp-content/uploads/2024/08/1621241649_59120_url-1024x575.jpeg" alt="Storm damage response" class="h-28 rounded-3xl object-cover shadow-2xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="overflow-hidden border-y border-white/10 bg-white/5 py-4">
+        <div class="marquee flex w-[200%] gap-8 whitespace-nowrap text-sm font-black uppercase tracking-[0.22em] text-slate-300">
+          <span>Fire & Smoke Damage</span><span>Water Damage</span><span>Storm Damage</span><span>Mold Remediation</span><span>Commercial Disaster</span><span>Greenlight Pre-Plan</span>
+          <span>Fire & Smoke Damage</span><span>Water Damage</span><span>Storm Damage</span><span>Mold Remediation</span><span>Commercial Disaster</span><span>Greenlight Pre-Plan</span>
+        </div>
+      </section>
+
+      <section id="about" class="relative px-5 py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.88fr_1.12fr]">
+          <div class="reveal">
+            <p class="mb-3 text-sm font-black uppercase tracking-[0.26em] text-teal-300">Who We Are</p>
+            <h2 class="display text-5xl font-black leading-none md:text-7xl">
+              A leader in Florida restoration since 1989.
+            </h2>
+          </div>
+          <div class="reveal grid gap-5 text-lg leading-8 text-slate-300">
+            <p>
+              Since 1989, Restoration Construction Team has been and continues to be a leader in the Restoration Industry. The company goal is to deliver exceptional service from start to finish, every single time.
+            </p>
+            <p>
+              RCT handles everything from the moment the emergency happens until the keys are handed back over to the client and everything in between.
+            </p>
+            <p>
+              The team is driven by compassion and remains committed to earning the trust of customers one customer at a time.
+            </p>
+          </div>
+        </div>
+        <div class="mx-auto mt-12 grid max-w-7xl gap-4 md:grid-cols-4">
+          <div class="glass reveal rounded-3xl p-6">
+            <p class="text-4xl font-black text-amber-300">1989</p>
+            <p class="mt-2 text-sm text-slate-300">Serving Florida from Tampa corporate offices</p>
+          </div>
+          <div class="glass reveal rounded-3xl p-6">
+            <p class="text-4xl font-black text-teal-300">365</p>
+            <p class="mt-2 text-sm text-slate-300">Account executives ready year-round</p>
+          </div>
+          <div class="glass reveal rounded-3xl p-6">
+            <p class="text-4xl font-black text-white">IICRC</p>
+            <p class="mt-2 text-sm text-slate-300">Certified technicians and project managers</p>
+          </div>
+          <div class="glass reveal rounded-3xl p-6">
+            <p class="text-4xl font-black text-red-300">A-Z</p>
+            <p class="mt-2 text-sm text-slate-300">Emergency to reconstruction handoff</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="px-5 py-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-12 max-w-3xl reveal">
+            <p class="mb-3 text-sm font-black uppercase tracking-[0.26em] text-amber-300">Services / Products</p>
+            <h2 class="display text-5xl font-black leading-none md:text-7xl">Disaster response built for homes, businesses, and critical operations.</h2>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <article class="service-card glass reveal rounded-[2rem] p-5">
+              <img src="https://rct24.com/wp-content/uploads/2024/08/fire-1024x724.jpg" alt="Fire damage" class="mb-5 h-48 w-full rounded-3xl object-cover" />
+              <h3 class="text-2xl font-black">Fire & Smoke Damage</h3>
+              <p class="mt-3 text-slate-300">The effects of fire damage will often be serious. RCT dispatches professionals to begin the entire restoration process.</p>
+            </article>
+            <article class="service-card glass reveal rounded-[2rem] p-5">
+              <img src="https://rct24.com/wp-content/uploads/2024/08/flood-1024x768.jpg" alt="Flood damage" class="mb-5 h-48 w-full rounded-3xl object-cover" />
+              <h3 class="text-2xl font-black">Flood & Water Damage</h3>
+              <p class="mt-3 text-slate-300">If flooding or water damage follows a storm or disaster, RCT can send disaster response crews now.</p>
+            </article>
+            <article class="service-card glass reveal rounded-[2rem] p-5">
+              <img src="https://rct24.com/wp-content/uploads/2024/08/1621241649_59120_url-1024x575.jpeg" alt="Wind and storm damage" class="mb-5 h-48 w-full rounded-3xl object-cover" />
+              <h3 class="text-2xl font-black">Wind / Storm Damage</h3>
+              <p class="mt-3 text-slate-300">Hurricanes, tornados, tropical storms, and extreme Florida weather can leave a wake of damage in their paths.</p>
+            </article>
+            <article class="service-card glass reveal rounded-[2rem] p-5">
+              <img src="https://rct24.com/wp-content/uploads/2024/10/Family-in-front-of-Home-scaled-1.jpg" alt="Residential emergency" class="mb-5 h-48 w-full rounded-3xl object-cover" />
+              <h3 class="text-2xl font-black">Residential Emergency</h3>
+              <p class="mt-3 text-slate-300">In emergencies, RCT is ready to act quickly and professionally to repair damage to your home or office.</p>
+            </article>
+            <article class="service-card glass reveal rounded-[2rem] p-5">
+              <img src="https://rct24.com/wp-content/uploads/2024/08/4.jpg" alt="Commercial disaster restoration" class="mb-5 h-48 w-full rounded-3xl object-cover" />
+              <h3 class="text-2xl font-black">Commercial Disaster</h3>
+              <p class="mt-3 text-slate-300">RCT provides drying, document restoration, electronics restoration, communications, and reporting support.</p>
+            </article>
+            <article class="service-card glass reveal rounded-[2rem] p-5">
+              <img src="https://rct24.com/wp-content/uploads/2024/08/123.jpeg" alt="Mold remediation" class="mb-5 h-48 w-full rounded-3xl object-cover" />
+              <h3 class="text-2xl font-black">Mold Remediation</h3>
+              <p class="mt-3 text-slate-300">Mold remediation reduces mold, cleans and treats affected areas, and helps prevent spreading.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="px-5 py-24">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1fr]">
+          <div class="reveal glass rounded-[2rem] p-8 md:p-10">
+            <p class="mb-3 text-sm font-black uppercase tracking-[0.26em] text-teal-300">Why Choose Us</p>
+            <h2 class="display text-5xl font-black leading-none md:text-6xl">Greenlight disaster pre-plan.</h2>
+            <p class="mt-6 text-lg leading-8 text-slate-300">
+              Through GREENLIGHT, mission-critical needs and priorities are identified in advance so immediate response measures can focus on restarting operations.
+            </p>
+            <ul class="mt-8 grid gap-4 text-slate-200">
+              <li class="rounded-2xl bg-white/8 p-4">Dedicated resources that respond 24 hours a day, 7 days a week.</li>
+              <li class="rounded-2xl bg-white/8 p-4">Pre-designed priorities, recovery plans, pre-approved pricing, and coordinated vendors.</li>
+              <li class="rounded-2xl bg-white/8 p-4">Priority resources in cases of an area-wide disaster.</li>
+            </ul>
+          </div>
+          <div class="reveal grid content-between gap-5">
+            <div class="rounded-[2rem] bg-amber-400 p-8 text-slate-950">
+              <p class="text-sm font-black uppercase tracking-[0.22em]">How RCT Works</p>
+              <h3 class="mt-4 text-4xl font-black">Emergency. Contents. Restoration. Pre-Plan.</h3>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="glass rounded-[2rem] p-6">
+                <h4 class="text-xl font-black">Emergency</h4>
+                <p class="mt-3 text-slate-300">Ready to act quickly and professionally to repair damage.</p>
+              </div>
+              <div class="glass rounded-[2rem] p-6">
+                <h4 class="text-xl font-black">Contents</h4>
+                <p class="mt-3 text-slate-300">Experience restoring affected contents within the structure.</p>
+              </div>
+              <div class="glass rounded-[2rem] p-6">
+                <h4 class="text-xl font-black">Restoration</h4>
+                <p class="mt-3 text-slate-300">Board-up, temporary roofing, rebuilds, and structural expertise.</p>
+              </div>
+              <div class="glass rounded-[2rem] p-6">
+                <h4 class="text-xl font-black">Pre-Plan</h4>
+                <p class="mt-3 text-slate-300">Disaster plans tailored to business needs through GREENLIGHT.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="px-5 pb-10 pt-24">
+        <div class="mx-auto overflow-hidden rounded-[2.4rem] border border-white/10 bg-white text-slate-950 shadow-2xl">
+          <div class="grid lg:grid-cols-[0.95fr_1.05fr]">
+            <div class="p-8 md:p-12">
+              <p class="mb-3 text-sm font-black uppercase tracking-[0.26em] text-[#0d5c8c]">Contact / Footer</p>
+              <h2 class="display text-5xl font-black leading-none md:text-7xl">Need us? We are always available 24 hours.</h2>
+              <p class="mt-6 text-lg leading-8 text-slate-600">
+                24 hours a day, 7 days a week. RCT is committed to earning the trust of customers one customer at a time.
+              </p>
+              <div class="mt-8 grid gap-4">
+                <a href="tel:18668275277" class="rounded-3xl bg-slate-950 p-5 text-white">
+                  <span class="block text-sm uppercase tracking-[0.2em] text-amber-300">Emergency Number</span>
+                  <span class="mt-1 block text-3xl font-black">1-866-827-5277</span>
+                </a>
+                <a href="mailto:info@rct24.com" class="rounded-3xl bg-slate-100 p-5">
+                  <span class="block text-sm uppercase tracking-[0.2em] text-[#0d5c8c]">Email</span>
+                  <span class="mt-1 block text-2xl font-black">info@rct24.com</span>
+                </a>
+                <div class="rounded-3xl bg-slate-100 p-5">
+                  <span class="block text-sm uppercase tracking-[0.2em] text-[#0d5c8c]">Location</span>
+                  <span class="mt-1 block text-xl font-black">Restoration Construction Team, LLC</span>
+                  <span class="block text-slate-600">310 E Harrison St Tampa, FL 33602</span>
+                </div>
+              </div>
+            </div>
+            <form class="grid content-start gap-4 bg-slate-950 p-8 md:p-12" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Message Ready';">
+              <h3 class="text-3xl font-black text-white">Any Questions? Fill in Below.</h3>
+              <input class="rounded-2xl border border-white/10 bg-white/10 px-5 py-4 text-white outline-none placeholder:text-slate-400 focus:border-amber-300" placeholder="Name" required />
+              <input class="rounded-2xl border border-white/10 bg-white/10 px-5 py-4 text-white outline-none placeholder:text-slate-400 focus:border-amber-300" type="email" placeholder="Email" required />
+              <input class="rounded-2xl border border-white/10 bg-white/10 px-5 py-4 text-white outline-none placeholder:text-slate-400 focus:border-amber-300" placeholder="Subject" />
+              <textarea class="min-h-40 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 text-white outline-none placeholder:text-slate-400 focus:border-amber-300" placeholder="Message"></textarea>
+              <button class="shine rounded-full bg-amber-400 px-7 py-4 font-black text-slate-950" type="submit">Submit Now</button>
+              <p class="text-sm text-slate-400">Social: Facebook, Youtube, Linkedin</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-5 pb-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+        <p>CGC153880 | Copyright @ 2024 Restoration Construction Team, All Right Reserved</p>
+        <div class="flex gap-4">
+          <a href="https://rct24.com/" class="hover:text-white">Original Website</a>
+          <a href="https://rct24.com/contact-us/" class="hover:text-white">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      if (window.gsap) {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".hero-copy > *", {
+          y: 30,
+          opacity: 0,
+          duration: 0.9,
+          stagger: 0.12,
+          ease: "power3.out",
+        });
+        gsap.from(".hero-visual", {
+          y: 38,
+          opacity: 0,
+          duration: 1,
+          delay: 0.25,
+          ease: "power3.out",
+        });
+        gsap.utils.toArray(".reveal").forEach((item) => {
+          gsap.from(item, {
+            y: 34,
+            opacity: 0,
+            duration: 0.85,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 84%",
+            },
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
