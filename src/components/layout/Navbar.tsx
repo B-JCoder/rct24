@@ -13,7 +13,11 @@ export function Navbar() {
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#why">Why RCT</a>
+        <a href="#process">Process</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#team">Team</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faqs">FAQs</a>
         <a href="#contact">Contact</a>
       </div>
       <div className="rct-nav-right">
