@@ -295,6 +295,45 @@ img {
   background-size: 44px 44px;
 }
 
+/* ── Hero Panel & Metrics ── */
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.metric {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--rct-radius-lg);
+  padding: 1.25rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.95);
+}
+
+.metric strong {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--rct-orange);
+  line-height: 1;
+}
+
+.metric span {
+  display: block;
+  margin-top: 0.3rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
 /* ── Section containers ───────────────────────────── */
 .rct-section,
 .rct-footer > div {

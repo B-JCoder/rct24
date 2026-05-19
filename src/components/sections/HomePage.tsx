@@ -16,12 +16,14 @@ const services = [
   },
   {
     title: "Wind / Storm Damage",
-    image: "https://rct24.com/wp-content/uploads/2024/08/1621241649_59120_url-1024x575.jpeg",
+    image:
+      "https://rct24.com/wp-content/uploads/2024/08/1621241649_59120_url-1024x575.jpeg",
     text: "Hurricanes, tornados, tropical storms, and extreme Florida weather can leave a wake of damage in their paths.",
   },
   {
     title: "Residential Emergency",
-    image: "https://rct24.com/wp-content/uploads/2024/10/Family-in-front-of-Home-scaled-1.jpg",
+    image:
+      "https://rct24.com/wp-content/uploads/2024/10/Family-in-front-of-Home-scaled-1.jpg",
     text: "In emergencies, RCT is ready to act quickly and professionally to repair damage to your home or office.",
   },
   {
@@ -164,14 +166,38 @@ const faqs = [
 ];
 
 const galleryImages = [
-  { src: "https://rct24.com/wp-content/uploads/2024/08/fire-1024x724.jpg", title: "Fire Damage Restoration" },
-  { src: "https://rct24.com/wp-content/uploads/2024/08/flood-1024x768.jpg", title: "Flood Recovery" },
-  { src: "https://rct24.com/wp-content/uploads/2024/08/1621241649_59120_url-1024x575.jpeg", title: "Storm Damage Repair" },
-  { src: "https://rct24.com/wp-content/uploads/2024/08/4.jpg", title: "Commercial Restoration" },
-  { src: "https://rct24.com/wp-content/uploads/2024/08/123.jpeg", title: "Mold Remediation" },
-  { src: "https://rct24.com/wp-content/uploads/2024/10/Family-in-front-of-Home-scaled-1.jpg", title: "Residential Recovery" },
-  { src: "https://rct24.com/wp-content/uploads/2024/08/hose-in-hands-female-firefighter-in-protective-un-2023-11-27-04-53-28-utc-1024x683.jpg", title: "Emergency Response" },
-  { src: "https://cdn.pixabay.com/photo/2020/02/02/04/03/tampa-4811962_1280.jpg", title: "Tampa Operations" },
+  {
+    src: "https://rct24.com/wp-content/uploads/2024/08/fire-1024x724.jpg",
+    title: "Fire Damage Restoration",
+  },
+  {
+    src: "https://rct24.com/wp-content/uploads/2024/08/flood-1024x768.jpg",
+    title: "Flood Recovery",
+  },
+  {
+    src: "https://rct24.com/wp-content/uploads/2024/08/1621241649_59120_url-1024x575.jpeg",
+    title: "Storm Damage Repair",
+  },
+  {
+    src: "https://rct24.com/wp-content/uploads/2024/08/4.jpg",
+    title: "Commercial Restoration",
+  },
+  {
+    src: "https://rct24.com/wp-content/uploads/2024/08/123.jpeg",
+    title: "Mold Remediation",
+  },
+  {
+    src: "https://rct24.com/wp-content/uploads/2024/10/Family-in-front-of-Home-scaled-1.jpg",
+    title: "Residential Recovery",
+  },
+  {
+    src: "https://rct24.com/wp-content/uploads/2024/08/hose-in-hands-female-firefighter-in-protective-un-2023-11-27-04-53-28-utc-1024x683.jpg",
+    title: "Emergency Response",
+  },
+  {
+    src: "https://cdn.pixabay.com/photo/2020/02/02/04/03/tampa-4811962_1280.jpg",
+    title: "Tampa Operations",
+  },
 ];
 
 const socialLinks = [
@@ -204,8 +230,7 @@ export function HomePage() {
               key={image}
               className="rct-hero-photo"
               style={{
-                backgroundImage:
-                  `linear-gradient(90deg, rgba(6, 17, 31, 0.15) 0%, rgba(6, 17, 31, 0.35) 40%, rgba(6, 17, 31, 0.85) 65%, rgba(6, 17, 31, 0.95) 100%), url("${image}")`,
+                backgroundImage: `linear-gradient(90deg, rgba(6, 17, 31, 0.15) 0%, rgba(6, 17, 31, 0.35) 40%, rgba(6, 17, 31, 0.85) 65%, rgba(6, 17, 31, 0.95) 100%), url("${image}")`,
               }}
             />
           ))}
@@ -220,9 +245,9 @@ export function HomePage() {
               </span>
               <h1>Building Trust. Restoring Lifestyle.</h1>
               <p>
-                Restoration Construction Team is a full service Disaster Recovery
-                and Restoration company with corporate offices in Tampa, serving
-                Florida since 1989.
+                Restoration Construction Team is a full service Disaster
+                Recovery and Restoration company with corporate offices in
+                Tampa, serving Florida since 1989.
               </p>
             </div>
             <div className="rct-actions">
@@ -292,8 +317,11 @@ export function HomePage() {
               The team is driven by compassion and remains committed to earning
               the trust of customers one customer at a time.
             </p>
-            <a className="rct-button rct-button-light rct-section-cta" href="#contact">
-              Get Free Consultation
+            <a
+              className="rct-button rct-button-light rct-section-cta"
+              href="#contact"
+            >
+              Contact Us
             </a>
           </div>
         </div>
@@ -326,7 +354,10 @@ export function HomePage() {
           ))}
         </div>
         <div className="rct-section-cta-wrap">
-          <a className="rct-button rct-button-light rct-section-cta" href="#contact">
+          <a
+            className="rct-button rct-button-light rct-section-cta"
+            href="#contact"
+          >
             Need Help? Contact Us Now
           </a>
         </div>
@@ -348,10 +379,16 @@ export function HomePage() {
           ))}
         </div>
         <div className="rct-section-cta-wrap">
-          <a className="rct-button rct-button-light rct-section-cta" href="tel:18668275277">
+          <a
+            className="rct-button rct-button-light rct-section-cta"
+            href="tel:18668275277"
+          >
             📞 Call Now: 1-866-827-5277
           </a>
-          <a className="rct-button rct-button-glass rct-section-cta" href="#contact">
+          <a
+            className="rct-button rct-button-glass rct-section-cta"
+            href="#contact"
+          >
             Request a Callback
           </a>
         </div>
@@ -368,14 +405,20 @@ export function HomePage() {
             restarting operations.
           </p>
           <ul>
-            <li>Dedicated resources that respond 24 hours a day, 7 days a week.</li>
+            <li>
+              Dedicated resources that respond 24 hours a day, 7 days a week.
+            </li>
             <li>
               Pre-designed priorities, recovery plans, pre-approved pricing, and
               coordinated vendors.
             </li>
             <li>Priority resources in cases of an area-wide disaster.</li>
           </ul>
-          <a className="rct-button rct-button-light rct-section-cta" href="#contact" style={{ marginTop: "1rem" }}>
+          <a
+            className="rct-button rct-button-light rct-section-cta"
+            href="#contact"
+            style={{ marginTop: "1rem" }}
+          >
             Get Your Free Pre-Plan
           </a>
         </div>
@@ -409,7 +452,11 @@ export function HomePage() {
               </div>
               <p>&ldquo;{t.text}&rdquo;</p>
               <div className="rct-testimonial-author">
-                <img className="rct-testimonial-avatar" src={t.photo} alt={t.name} />
+                <img
+                  className="rct-testimonial-avatar"
+                  src={t.photo}
+                  alt={t.name}
+                />
                 <div>
                   <strong>{t.name}</strong>
                   <span>{t.role}</span>
@@ -419,7 +466,10 @@ export function HomePage() {
           ))}
         </div>
         <div className="rct-section-cta-wrap">
-          <a className="rct-button rct-button-light rct-section-cta" href="#contact">
+          <a
+            className="rct-button rct-button-light rct-section-cta"
+            href="#contact"
+          >
             Share Your Experience
           </a>
         </div>
@@ -442,7 +492,10 @@ export function HomePage() {
           ))}
         </div>
         <div className="rct-section-cta-wrap">
-          <a className="rct-button rct-button-light rct-section-cta" href="#contact">
+          <a
+            className="rct-button rct-button-light rct-section-cta"
+            href="#contact"
+          >
             Work With Our Team
           </a>
         </div>
@@ -465,7 +518,10 @@ export function HomePage() {
           ))}
         </div>
         <div className="rct-section-cta-wrap">
-          <a className="rct-button rct-button-light rct-section-cta" href="#contact">
+          <a
+            className="rct-button rct-button-light rct-section-cta"
+            href="#contact"
+          >
             Start Your Restoration
           </a>
         </div>
@@ -486,7 +542,9 @@ export function HomePage() {
             >
               <div className="rct-faq-question">
                 <span>{faq.q}</span>
-                <span className="rct-faq-icon">{openFaq === i ? "−" : "+"}</span>
+                <span className="rct-faq-icon">
+                  {openFaq === i ? "−" : "+"}
+                </span>
               </div>
               {openFaq === i && (
                 <div className="rct-faq-answer">
@@ -497,7 +555,10 @@ export function HomePage() {
           ))}
         </div>
         <div className="rct-section-cta-wrap">
-          <a className="rct-button rct-button-light rct-section-cta" href="#contact">
+          <a
+            className="rct-button rct-button-light rct-section-cta"
+            href="#contact"
+          >
             Have More Questions? Contact Us
           </a>
         </div>
@@ -529,7 +590,10 @@ export function HomePage() {
         <form className="rct-form">
           <div className="rct-form-heading">
             <span>Get in touch</span>
-            <h3>Tell us what happened and we will point you to the right next step.</h3>
+            <h3>
+              Tell us what happened and we will point you to the right next
+              step.
+            </h3>
           </div>
           <label>
             <span>Name</span>
@@ -550,7 +614,12 @@ export function HomePage() {
           <button type="submit">Submit Now</button>
           <div className="rct-social-links">
             {socialLinks.map((link) => (
-              <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {link.label}
               </a>
             ))}
