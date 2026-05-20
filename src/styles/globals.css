@@ -4,8 +4,8 @@
 :root {
   --rct-logo-blue: #25aae1;
   --rct-logo-blue-hover: #1c92c4;
-  --rct-blue: #ff7a00;
-  --rct-dark-blue: #cc5200;
+  --rct-blue: #25aae1;
+  --rct-dark-blue: #1c92c4;
   --rct-orange: #f5a623;
   --rct-dark: #1a2332;
   --rct-text: #333333;
@@ -75,8 +75,8 @@ img {
 .site-header.scrolled {
   top: 0.75rem;
   background: rgba(6, 17, 31, 0.85);
-  border-color: rgba(255, 122, 0, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 122, 0, 0.15);
+  border-color: rgba(37, 170, 225, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 15px rgba(37, 170, 225, 0.15);
   padding: 0.1rem 0.5rem;
 }
 
@@ -138,12 +138,12 @@ img {
   position: absolute;
   inset: 0;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(255, 122, 0, 0.1) 0%, rgba(255, 122, 0, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(37, 170, 225, 0.1) 0%, rgba(37, 170, 225, 0.2) 100%);
   opacity: 0;
   transform: scale(0.85);
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: -1;
-  border: 1px solid rgba(255, 122, 0, 0.15);
+  border: 1px solid rgba(37, 170, 225, 0.15);
 }
 
 .rct-nav-links a:hover {
@@ -253,10 +253,10 @@ img {
   margin-top: 1.5rem;
   padding: 0.65rem 1.25rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--rct-blue) 0%, #cc5200 100%);
+  background: linear-gradient(135deg, var(--rct-blue) 0%, var(--rct-dark-blue) 100%);
   color: #ffffff !important;
   font-size: 1rem !important;
-  box-shadow: 0 4px 20px rgba(255, 122, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(37, 170, 225, 0.3);
 }
 
 /* ── Nav Right Group ──────────────────────────────── */
@@ -345,7 +345,7 @@ img {
 .rct-form button {
   background: var(--rct-blue);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(255, 122, 0, 0.25);
+  box-shadow: 0 4px 16px rgba(37, 170, 225, 0.25);
 }
 
 .rct-button-glass {
@@ -580,7 +580,7 @@ img {
 }
 
 .rct-actions .rct-button-light {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 4px 12px rgba(255, 122, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 4px 12px rgba(37, 170, 225, 0.35);
 }
 
 .rct-actions .rct-button:hover {
@@ -968,7 +968,7 @@ img {
 .rct-form input:focus,
 .rct-form textarea:focus {
   border-color: var(--rct-blue);
-  box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.12);
+  box-shadow: 0 0 0 3px rgba(37, 170, 225, 0.12);
 }
 
 .rct-form input::placeholder,
@@ -1339,7 +1339,7 @@ img {
 
 .rct-faq-open {
   border-color: var(--rct-blue);
-  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.12);
+  box-shadow: 0 0 0 2px rgba(37, 170, 225, 0.12);
 }
 
 .rct-faq-question {
