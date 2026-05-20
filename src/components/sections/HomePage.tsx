@@ -210,10 +210,6 @@ const socialLinks = [
     label: "Facebook",
     href: "https://www.facebook.com/RestorationConstructionTeam/",
   },
-  {
-    label: "Youtube",
-    href: "https://www.facebook.com/RestorationConstructionTeam/",
-  },
 ];
 
 const heroSlides = [
